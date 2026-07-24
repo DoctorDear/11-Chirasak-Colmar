@@ -6,6 +6,7 @@
     --lightest-grey: #e9e9e9;
     --white: #ffffff;
     --light-blue: #36b7ea;
+    --dark-blue: #0d8ac7;
 }
 
 * {
@@ -69,6 +70,13 @@ body {
     background-color: var(--light-grey);
     border: none;
     padding: 8px 0;
+    transition: all 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: var(--dark-grey);
+    transform: translateY(-2px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
 }
 
 .hero button a {
@@ -115,6 +123,11 @@ body {
 .info-text a {
     text-decoration: none;
     color: var(--light-blue);
+    transition: color 0.2s ease;
+}
+
+.info-text a:hover {
+    color: var(--dark-blue);
 }
 
 .course {
@@ -205,6 +218,11 @@ footer {
     .nav-desktop a {
         text-decoration: none;
         color: var(--dark-grey);
+        transition: color 0.2s ease;
+    }
+
+    .nav-desktop a:hover {
+         color: var(--light-blue);
     }
 
     .navbar-container {
@@ -305,7 +323,15 @@ footer {
     width: 100%;
     display: block;
     object-fit: cover;
-}
+    }
+
+    .info-text a {
+        transition: color 0.2s ease;
+    }
+
+    .info-text a:hover {
+        color: var(--dark-blue);
+    }
 
     .course {
         padding: 32px 24px;
@@ -329,6 +355,14 @@ footer {
 
     .course-desktop-card {
         background-color: var(--white);
+        transition: transform 0.3s ease;
+        box-shadow: 0.3s ease;
+    }
+
+    
+    .course-desktop-card:hover {
+        transform: translateY(-6px); 
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); 
     }
 
     .course-info {
