@@ -1,3 +1,6 @@
+/* =========================================
+   1. CSS Variables & Reset
+   ========================================= */
 :root {
     --dark-grey: #3c3b3d;
     --light-grey: #8e8e8e;
@@ -19,13 +22,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* =========================================
+   2. Mobile Styles (Default / Mobile-First)
+   ========================================= */
+
+/* --- Navbar (Mobile) --- */
 .navbar-container {
     padding: 10px 10px;
     height: 64px;
     display: flex;
     align-items: center;
 }
-
 
 .nav-mobile {
     display: flex;
@@ -35,15 +43,12 @@ body {
     padding-top: 10px;
 }
 
-/* =========================================
-   Hero Section (Mobile)
-   ========================================= */
-
+/* --- Hero Section (Mobile) --- */
 .hero {
     background-color: var(--lighter-grey);
 }
 
-.hero-img img{
+.hero-img img {
     width: 100%;
     display: block;
 }
@@ -75,8 +80,8 @@ body {
 
 .hero button:hover {
     background-color: var(--dark-grey);
-    transform: translateY(-2px); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .hero button a {
@@ -87,22 +92,22 @@ body {
     text-align: center;
 }
 
+/* --- Information Section (Mobile) --- */
 .information {
     padding: 16px 16px;
 }
 
 .information-left {
-  display: none;
+    display: none;
 }
 
-
-.information-right{
+.information-right {
     display: flex;
     flex-direction: column;
     gap: 64px;
 }
 
-.information-card img{
+.information-card img {
     width: 100%;
 }
 
@@ -130,8 +135,9 @@ body {
     color: var(--dark-blue);
 }
 
+/* --- Course Section (Mobile) --- */
 .course {
-    padding: 32px 16px; 
+    padding: 32px 16px;
     border-top: 1px solid var(--lighter-grey);
     border-bottom: 1px solid var(--lighter-grey);
     background-color: var(--lightest-grey);
@@ -160,6 +166,7 @@ body {
     background-color: var(--medium-grey);
 }
 
+/* --- Thesis Section (Mobile) --- */
 .thesis {
     padding-top: 32px;
 }
@@ -175,21 +182,38 @@ body {
     margin-bottom: 24px;
 }
 
+/* --- Footer (Mobile) --- */
 footer {
     padding: 16px 16px;
 }
 
+/* --- Hide Desktop-only Elements on Mobile --- */
 .logo,
 .nav-desktop,
 .information-left,
 .course-desktop-grid,
-.thesis-right, .thesis-left-info, .footer-links {
+.thesis-right,
+.thesis-left-info,
+.footer-links {
     display: none;
 }
 
+
+/* =========================================
+   3. Tablet & Desktop Styles (min-width: 768px)
+   ========================================= */
 @media (min-width: 768px) {
+    /* Hide Mobile Navbar */
     .nav-mobile {
         display: none;
+    }
+
+    /* Navbar (Desktop) */
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
     }
 
     .logo {
@@ -222,16 +246,10 @@ footer {
     }
 
     .nav-desktop a:hover {
-         color: var(--light-blue);
+        color: var(--light-blue);
     }
 
-    .navbar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 24px;
-    }
-    
+    /* Hero Section (Desktop) */
     .hero-container {
         display: flex;
         align-items: center;
@@ -255,14 +273,15 @@ footer {
     }
 
     .hero-container button {
-    background-color: var(--dark-grey);
-    width: 100%;
-    height: 3rem;
-    cursor: pointer;
-    color: white;
-    padding: 8px;
+        background-color: var(--light-grey);
+        width: 100%;
+        height: 3rem;
+        cursor: pointer;
+        color: white;
+        padding: 8px;
     }
 
+    /* Information Section (Desktop) */
     .information {
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -277,16 +296,16 @@ footer {
         display: flex;
         flex-direction: column;
         padding-right: 24px;
-        border-right: 1px solid var(--lighter-grey);    
+        border-right: 1px solid var(--lighter-grey);
     }
 
-    .information-left img{
+    .information-left img {
         width: 100%;
         display: block;
         margin-bottom: 32px;
     }
 
-    .information-left h2{
+    .information-left h2 {
         margin-bottom: 24px;
     }
 
@@ -300,7 +319,7 @@ footer {
         padding: 0px 0px 16px 16px;
         gap: 24px;
     }
-    
+
     .information-card {
         display: flex;
         align-items: center;
@@ -308,7 +327,7 @@ footer {
         border-bottom: 1px solid var(--lighter-grey);
     }
 
-.information-card:last-child {
+    .information-card:last-child {
         border-bottom: none;
         padding-bottom: 0;
     }
@@ -320,9 +339,9 @@ footer {
 
     .info-img-container picture,
     .info-img-container img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
+        width: 100%;
+        display: block;
+        object-fit: cover;
     }
 
     .info-text a {
@@ -333,6 +352,7 @@ footer {
         color: var(--dark-blue);
     }
 
+    /* Course Section (Desktop) */
     .course {
         padding: 32px 24px;
     }
@@ -359,10 +379,9 @@ footer {
         box-shadow: 0.3s ease;
     }
 
-    
     .course-desktop-card:hover {
-        transform: translateY(-6px); 
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); 
+        transform: translateY(-6px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
 
     .course-info {
@@ -381,6 +400,7 @@ footer {
         padding-bottom: 8px;
     }
 
+    /* Thesis Section (Desktop) */
     .thesis-container {
         display: grid;
         grid-template-columns: 3fr 2fr;
@@ -410,6 +430,7 @@ footer {
         align-items: center;
         padding: 16px;
     }
+
     .thesis-article-img {
         width: 35%;
         flex-shrink: 0;
@@ -429,6 +450,7 @@ footer {
         padding-bottom: 10px;
     }
 
+    /* Footer (Desktop) */
     footer {
         display: flex;
         justify-content: space-between;
@@ -451,8 +473,12 @@ footer {
     }
 }
 
+
+/* =========================================
+   4. Large Desktop Styles (min-width: 1024px)
+   ========================================= */
 @media (min-width: 1024px) {
     .course {
-        padding: 32px 72px; 
+        padding: 32px 72px;
     }
 }
