@@ -166,7 +166,9 @@ footer {
 }
 
 .logo,
-.nav-desktop {
+.nav-desktop,
+.information-left,
+.course-desktop-grid {
     display: none;
 }
 
@@ -178,7 +180,18 @@ footer {
     .logo {
         display: flex;
         align-items: center;
-        gap: 8px
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-weight: bold;
+        color: var(--dark-grey);
+        white-space: nowrap;
+    }
+
+    .logo-text span {
+        font-weight: normal;
+        color: var(--light-grey);
     }
 
     .nav-desktop {
@@ -215,8 +228,6 @@ footer {
         flex-direction: column;
         justify-content: center;
         padding-left: 24px;
-        margin: 0 1%;
-        padding: 0 2%;
     }
 
     .hero .desc {
@@ -229,5 +240,63 @@ footer {
     height: 3rem;
     cursor: pointer;
     color: white;
+    padding: 8px;
     }
+
+    .information {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        padding: 32px 0 32px 24px;
+    }
+
+    .information-mobile {
+        display: none;
+    }
+
+    .information-left {
+        display: flex;
+        flex-direction: column;
+        padding-right: 24px;
+        border-right: 1px solid var(--lighter-grey);    
+    }
+
+    .information-left img{
+        width: 100%;
+        display: block;
+        margin-bottom: 32px;
+    }
+
+    .information-right {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px 16px 16px;
+        gap: 16px;
+    }
+    
+    .information-card {
+        display: flex;
+        align-items: center;
+    }
+
+    .info-img-container {
+        width: 35%;
+        flex-shrink: 0;
+    }
+
+    .info-img-container picture,
+    .info-img-container img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.course-mobile {
+    display: none;
+}
+
+.course-desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
 }
