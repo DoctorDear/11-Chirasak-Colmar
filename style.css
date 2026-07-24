@@ -1,6 +1,7 @@
 :root {
     --dark-grey: #3c3b3d;
     --light-grey: #8e8e8e;
+    --medium-grey: #bdbdbd;
     --lighter-grey: #dfdfdf;
     --lightest-grey: #e9e9e9;
     --white: #ffffff;
@@ -117,8 +118,7 @@ body {
 }
 
 .course {
-    padding: 0 16px;
-    padding-bottom: 32px;
+    padding: 32px 72px; 
     border-top: 1px solid var(--lighter-grey);
     border-bottom: 1px solid var(--lighter-grey);
     background-color: var(--lightest-grey);
@@ -127,7 +127,6 @@ body {
 .course-title {
     font-size: 2rem;
     text-align: center;
-    padding-top: 32px;
     padding-bottom: 16px;
 }
 
@@ -145,7 +144,7 @@ body {
 
 .course-box {
     padding: 16px 16px;
-    background-color: var(--lighter-grey);
+    background-color: var(--medium-grey);
 }
 
 .thesis {
@@ -299,6 +298,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    padding-top: 16px;
 }
 
 .course-desktop-grid img {
@@ -306,7 +306,23 @@ footer {
     display: block;
 }
 
+.course-desktop-card {
+    background-color: var(--white);
+}
+
 .course-info {
-    padding: 16px;
+    padding: 16px 16px 24px 16px;
+}
+
+.course-info h4 {
+    padding-bottom: 8px;
+}
+
+.course-info p {
+    color: var(--light-grey);
+}
+
+.course-info p:first-of-type {
+    padding-bottom: 8px;
 }
 }
