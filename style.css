@@ -267,6 +267,14 @@ footer {
         margin-bottom: 32px;
     }
 
+    .information-left h2{
+        margin-bottom: 24px;
+    }
+
+    .information-left p:first-of-type {
+        margin-bottom: 32px;
+    }
+
     .information-right {
         display: flex;
         flex-direction: column;
