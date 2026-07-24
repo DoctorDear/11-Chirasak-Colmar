@@ -291,6 +291,10 @@ footer {
     object-fit: cover;
 }
 
+.course {
+    padding: 32px 24px;
+}
+
 .course-mobile {
     display: none;
 }
@@ -330,6 +334,11 @@ footer {
 .thesis-container {
     display: grid;
     grid-template-columns: 3fr 2fr;
+}
+
+.thesis-left-info,
+.thesis-right {
+    display: block;
 }
 
 .thesis-left {
@@ -381,10 +390,21 @@ footer p {
     color: var(--light-grey);
 }
 
+.footer-links {
+    display: flex;
+    gap: 16px;
+}
+
 .footer-links a {
     text-decoration: none;
     color: var(--light-grey);
 }
 
 
+}
+
+@media (min-width: 1024px) {
+    .course {
+        padding: 32px 72px; 
+    }
 }
