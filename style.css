@@ -279,12 +279,19 @@ footer {
         display: flex;
         flex-direction: column;
         padding: 0px 0px 16px 16px;
-        gap: 16px;
+        gap: 24px;
     }
     
     .information-card {
         display: flex;
         align-items: center;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--lighter-grey);
+    }
+
+.information-card:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
     }
 
     .info-img-container {
