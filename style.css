@@ -1,0 +1,143 @@
+:root {
+    --dark-grey: #3c3b3d;
+    --light-grey: #8e8e8e;
+    --lighter-grey: #dfdfdf;
+    --lightest-grey: #e9e9e9;
+    --white: #ffffff;
+    --light-blue: #36b7ea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.navbar-container {
+    padding: 10px 10px;
+    height: 64px;
+    align-items: center;
+}
+
+
+.nav-mobile {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+/* =========================================
+   Hero Section (Mobile)
+   ========================================= */
+
+.hero {
+    background-color: var(--lighter-grey);
+}
+
+.hero-img img{
+    width: 100%;
+    display: block;
+}
+
+.hero-content {
+    padding: 32px 16px;
+}
+
+.hero .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--dark-grey);
+    margin-bottom: 32px;
+}
+
+.hero .desc {
+    font-size: 1.25rem;
+    color: var(--dark-grey);
+    margin-bottom: 24px;
+}
+
+.hero button {
+    width: 100%;
+    background-color: var(--light-grey);
+    border: none;
+    padding: 8px 0;
+}
+
+.hero button a {
+    text-decoration: none;
+    display: block;
+    font-size: 1.25rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.information {
+    padding: 16px 16px;
+}
+
+.information-left {
+  display: none;
+}
+
+
+.information-right{
+    display: flex;
+    flex-direction: column;
+    gap: 64px
+}
+
+.information-card img{
+    width: 100%;
+}
+
+.info-text {
+    padding: 16px;
+}
+
+.info-text h2 {
+    color: var(--dark-grey);
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    color: var(--light-grey);
+    margin-bottom: 10px;
+}
+
+.info-text a {
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+.course {
+    padding: 0 16px;
+}
+
+.course-title {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 16px;
+}
+
+.course-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.course-mobile a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+
+.course-box {
+    padding: 16px 16px;
+    background-color: var(--lighter-grey);
+}
