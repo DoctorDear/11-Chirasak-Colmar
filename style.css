@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .navbar-container {
@@ -327,7 +327,7 @@ footer {
         padding: 16px 16px 24px 16px;
     }
 
-    .course-info h4 {
+    .course-info h3 {
         padding-bottom: 8px;
     }
 
